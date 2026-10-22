@@ -1,0 +1,12 @@
+.teclas {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.teclas .tecla {
+  width: 100px;
+  height: 150px;
+  font-size: 20px;
+  box-sizing: border-box;
+}
