@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   
+    <!--libreria Tone.js: debe cargarse antes de nuestro script-->
+    <script src="https://cdn.jsdelivr.net/npm/tone@14.7.77/build/Tone.js"></script>
+
+    <!--conexion con css-->
+    <link rel="stylesheet" href="style.css">
+    
+    <title>Stylophone Virtual</title>
+  </head>
+  
+  <body>
+   
+    <h1>stylophone sin stylo :(</h1>
+
+    <!--boton TIC: es uno solo, por eso usa id en vez de class-->
+    <button id="tic">TIC</button>
+
+    <!--botones del looper-->
+    <button id="play">PLAY</button>
+    <button id="rec">REC</button>
+
+    <!--deslizador de tempo-->
+    <input type="range" id="tempo" min="60" max="220" value="100">
+    <!--muestra el valor del tempo seleccionado en el deslizador-->
+    <span id="tempoValor">100</span> BPM
+
+    <div class="piano">
+      <!--botones asociados a la clase "tecla" y sus datos "note"-->
+      <button class="tecla blanca" data-note="C3">C3</button>
+      <button class="tecla negra" data-note="C#3">C#3</button>
+      <button class="tecla blanca" data-note="D3">D3</button>
+      <button class="tecla negra" data-note="D#3">D#3</button>
+      <button class="tecla blanca" data-note="E3">E3</button>
+      <button class="tecla blanca" data-note="F3">F3</button>
+      <button class="tecla negra" data-note="F#3">F#3</button>
+      <button class="tecla blanca" data-note="G3">G3</button>
+      <button class="tecla negra" data-note="G#3">G#3</button>
+      <button class="tecla blanca" data-note="A3">A3</button>
+      <button class="tecla negra" data-note="A#3">A#3</button>
+      <button class="tecla blanca" data-note="B3">B3</button>
+      <button class="tecla blanca" data-note="C4">C4</button>
+    </div>
+    
+    <!--conexion con java script-->
+    <script src="script.js"></script>
+  </body>
+</html>
