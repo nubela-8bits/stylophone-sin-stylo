@@ -1,0 +1,50 @@
+/* contenedor: las teclas blancas en fila, y referencia para colocar las negras */
+.piano {
+  position: relative;      /* las negras se miden desde aquí */
+  display: flex;           /* teclas en fila */
+  max-width: 480px;
+  height: 200px;
+}
+
+/* teclas blancas: se reparten el ancho a partes iguales */
+.blanca {
+  flex: 1;
+  background: white;
+  color: black;
+  border: 1px solid rgb(0, 0, 0);
+}
+
+/* teclas negras: flotan encima de las blancas */
+.negra {
+  position: absolute;      /* salen de la fila */
+  top: 0;
+  width: 7%;
+  height: 60%;
+  background: black;
+  color: white;
+}
+
+/* posición horizontal de cada negra: frontera entre blancas menos la mitad de su ancho */
+.negra[data-note="C#3"] { left: 9%; }
+.negra[data-note="D#3"] { left: 21.5%; }
+.negra[data-note="F#3"] { left: 46.5%; }
+.negra[data-note="G#3"] { left: 59%; }
+.negra[data-note="A#3"] { left: 71.5%; }
+
+/* mientras se pulsa una tecla, cambia de color */
+.tecla:active {
+  background: rgb(255, 0, 157);
+}
+
+#tic, #play, #rec {
+  width: 70px;       
+  height: 50px;       
+  font-size: 20px;    
+  background: rgb(224, 224, 224);
+  border: 0px;
+}
+
+/* botón activo: se enciende */
+#tic.activo { background: rgb(157, 0, 255); }
+#play.activo { background: rgb(162, 255, 0); }
+#rec.activo { background: rgb(255, 191, 0); }
